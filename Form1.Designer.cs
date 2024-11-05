@@ -241,9 +241,9 @@
             // 
             // btnAllStudents
             // 
-            this.btnAllStudents.Location = new System.Drawing.Point(859, 89);
+            this.btnAllStudents.Location = new System.Drawing.Point(856, 89);
             this.btnAllStudents.Name = "btnAllStudents";
-            this.btnAllStudents.Size = new System.Drawing.Size(166, 36);
+            this.btnAllStudents.Size = new System.Drawing.Size(170, 40);
             this.btnAllStudents.TabIndex = 22;
             this.btnAllStudents.Text = "View all students";
             this.btnAllStudents.UseVisualStyleBackColor = true;
