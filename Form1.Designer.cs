@@ -70,8 +70,9 @@
             // 
             // btnUpdateSInfo
             // 
-            this.btnUpdateSInfo.BackColor = System.Drawing.Color.Blue;
-            this.btnUpdateSInfo.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnUpdateSInfo.BackColor = System.Drawing.Color.Black;
+            this.btnUpdateSInfo.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnUpdateSInfo.FlatAppearance.BorderSize = 2;
             this.btnUpdateSInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateSInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateSInfo.ForeColor = System.Drawing.Color.White;
@@ -88,8 +89,9 @@
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.BackColor = System.Drawing.Color.Blue;
-            this.btnDeleteStudent.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.Black;
+            this.btnDeleteStudent.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnDeleteStudent.FlatAppearance.BorderSize = 2;
             this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteStudent.ForeColor = System.Drawing.Color.White;
@@ -106,8 +108,9 @@
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.BackColor = System.Drawing.Color.Blue;
-            this.btnAddStudent.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnAddStudent.BackColor = System.Drawing.Color.Black;
+            this.btnAddStudent.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnAddStudent.FlatAppearance.BorderSize = 2;
             this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStudent.ForeColor = System.Drawing.Color.White;
@@ -134,8 +137,9 @@
             // 
             // btnReport
             // 
-            this.btnReport.BackColor = System.Drawing.Color.Blue;
-            this.btnReport.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnReport.BackColor = System.Drawing.Color.Black;
+            this.btnReport.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnReport.FlatAppearance.BorderSize = 2;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.White;
@@ -280,8 +284,9 @@
             // 
             // btnAllStudents
             // 
-            this.btnAllStudents.BackColor = System.Drawing.Color.Blue;
-            this.btnAllStudents.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnAllStudents.BackColor = System.Drawing.Color.Black;
+            this.btnAllStudents.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnAllStudents.FlatAppearance.BorderSize = 2;
             this.btnAllStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllStudents.ForeColor = System.Drawing.Color.White;
@@ -326,7 +331,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Blue;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.flowLayoutPanel1.Controls.Add(this.btnAddStudent);
             this.flowLayoutPanel1.Controls.Add(this.btnDeleteStudent);
             this.flowLayoutPanel1.Controls.Add(this.btnAllStudents);
@@ -334,7 +339,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnReport);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 87);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(286, 654);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(296, 512);
             this.flowLayoutPanel1.TabIndex = 27;
             // 
             // frmStudentRecords
