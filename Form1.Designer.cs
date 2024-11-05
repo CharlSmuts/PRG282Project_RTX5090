@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentRecords));
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.btnUpdateSInfo = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
@@ -49,13 +50,19 @@
             this.btnNextRecord = new System.Windows.Forms.Button();
             this.btnPrevRecord = new System.Windows.Forms.Button();
             this.btnAllStudents = new System.Windows.Forms.Button();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvStudents
             // 
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(40, 131);
+            this.dgvStudents.Location = new System.Drawing.Point(1114, 247);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.ReadOnly = true;
             this.dgvStudents.Size = new System.Drawing.Size(568, 401);
@@ -63,37 +70,61 @@
             // 
             // btnUpdateSInfo
             // 
-            this.btnUpdateSInfo.Location = new System.Drawing.Point(856, 177);
+            this.btnUpdateSInfo.BackColor = System.Drawing.Color.Blue;
+            this.btnUpdateSInfo.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnUpdateSInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateSInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateSInfo.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateSInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateSInfo.Image")));
+            this.btnUpdateSInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdateSInfo.Location = new System.Drawing.Point(3, 306);
             this.btnUpdateSInfo.Name = "btnUpdateSInfo";
-            this.btnUpdateSInfo.Size = new System.Drawing.Size(170, 40);
+            this.btnUpdateSInfo.Size = new System.Drawing.Size(283, 95);
             this.btnUpdateSInfo.TabIndex = 1;
             this.btnUpdateSInfo.Text = "Update Student Information";
-            this.btnUpdateSInfo.UseVisualStyleBackColor = true;
+            this.btnUpdateSInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdateSInfo.UseVisualStyleBackColor = false;
             this.btnUpdateSInfo.Click += new System.EventHandler(this.btnUpdateSInfo_Click);
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.Location = new System.Drawing.Point(856, 223);
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.Blue;
+            this.btnDeleteStudent.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStudent.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStudent.Image")));
+            this.btnDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(3, 104);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(170, 40);
+            this.btnDeleteStudent.Size = new System.Drawing.Size(283, 95);
             this.btnDeleteStudent.TabIndex = 2;
             this.btnDeleteStudent.Text = "Delete a Student";
-            this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeleteStudent.UseVisualStyleBackColor = false;
             this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(856, 131);
+            this.btnAddStudent.BackColor = System.Drawing.Color.Blue;
+            this.btnAddStudent.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStudent.ForeColor = System.Drawing.Color.White;
+            this.btnAddStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStudent.Image")));
+            this.btnAddStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddStudent.Location = new System.Drawing.Point(3, 3);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(170, 40);
+            this.btnAddStudent.Size = new System.Drawing.Size(283, 95);
             this.btnAddStudent.TabIndex = 3;
             this.btnAddStudent.Text = "Add a Student";
-            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddStudent.UseVisualStyleBackColor = false;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnUpdateDGV
             // 
-            this.btnUpdateDGV.Location = new System.Drawing.Point(856, 315);
+            this.btnUpdateDGV.Location = new System.Drawing.Point(832, 100);
             this.btnUpdateDGV.Name = "btnUpdateDGV";
             this.btnUpdateDGV.Size = new System.Drawing.Size(170, 40);
             this.btnUpdateDGV.TabIndex = 4;
@@ -103,17 +134,25 @@
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(856, 269);
+            this.btnReport.BackColor = System.Drawing.Color.Blue;
+            this.btnReport.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReport.Location = new System.Drawing.Point(3, 407);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(170, 40);
+            this.btnReport.Size = new System.Drawing.Size(283, 95);
             this.btnReport.TabIndex = 5;
             this.btnReport.Text = "Generate a summary report";
-            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.UseVisualStyleBackColor = false;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(727, 396);
+            this.lblTotal.Location = new System.Drawing.Point(446, 586);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(119, 13);
             this.lblTotal.TabIndex = 6;
@@ -123,7 +162,7 @@
             // 
             this.lblOutStudents.AutoSize = true;
             this.lblOutStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOutStudents.Location = new System.Drawing.Point(852, 384);
+            this.lblOutStudents.Location = new System.Drawing.Point(571, 574);
             this.lblOutStudents.Name = "lblOutStudents";
             this.lblOutStudents.Size = new System.Drawing.Size(177, 39);
             this.lblOutStudents.TabIndex = 7;
@@ -132,7 +171,7 @@
             // lblAverageAge
             // 
             this.lblAverageAge.AutoSize = true;
-            this.lblAverageAge.Location = new System.Drawing.Point(727, 456);
+            this.lblAverageAge.Location = new System.Drawing.Point(446, 646);
             this.lblAverageAge.Name = "lblAverageAge";
             this.lblAverageAge.Size = new System.Drawing.Size(126, 13);
             this.lblAverageAge.TabIndex = 8;
@@ -142,7 +181,7 @@
             // 
             this.lblOutAAge.AutoSize = true;
             this.lblOutAAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOutAAge.Location = new System.Drawing.Point(859, 435);
+            this.lblOutAAge.Location = new System.Drawing.Point(578, 625);
             this.lblOutAAge.Name = "lblOutAAge";
             this.lblOutAAge.Size = new System.Drawing.Size(231, 39);
             this.lblOutAAge.TabIndex = 9;
@@ -150,7 +189,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(261, 57);
+            this.txtName.Location = new System.Drawing.Point(518, 274);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(151, 20);
             this.txtName.TabIndex = 10;
@@ -158,7 +197,7 @@
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(457, 57);
+            this.txtAge.Location = new System.Drawing.Point(518, 352);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(151, 20);
             this.txtAge.TabIndex = 12;
@@ -166,7 +205,7 @@
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(658, 57);
+            this.txtCourse.Location = new System.Drawing.Point(518, 391);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(151, 20);
             this.txtCourse.TabIndex = 13;
@@ -175,7 +214,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(258, 41);
+            this.label1.Location = new System.Drawing.Point(515, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 14;
@@ -184,7 +223,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(454, 41);
+            this.label2.Location = new System.Drawing.Point(515, 336);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 15;
@@ -193,7 +232,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(655, 41);
+            this.label3.Location = new System.Drawing.Point(515, 375);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 16;
@@ -201,7 +240,7 @@
             // 
             // btnFirstRecord
             // 
-            this.btnFirstRecord.Location = new System.Drawing.Point(40, 548);
+            this.btnFirstRecord.Location = new System.Drawing.Point(1114, 664);
             this.btnFirstRecord.Name = "btnFirstRecord";
             this.btnFirstRecord.Size = new System.Drawing.Size(75, 23);
             this.btnFirstRecord.TabIndex = 18;
@@ -211,7 +250,7 @@
             // 
             // btnLastRecord
             // 
-            this.btnLastRecord.Location = new System.Drawing.Point(410, 548);
+            this.btnLastRecord.Location = new System.Drawing.Point(1484, 664);
             this.btnLastRecord.Name = "btnLastRecord";
             this.btnLastRecord.Size = new System.Drawing.Size(75, 23);
             this.btnLastRecord.TabIndex = 19;
@@ -221,7 +260,7 @@
             // 
             // btnNextRecord
             // 
-            this.btnNextRecord.Location = new System.Drawing.Point(279, 548);
+            this.btnNextRecord.Location = new System.Drawing.Point(1353, 664);
             this.btnNextRecord.Name = "btnNextRecord";
             this.btnNextRecord.Size = new System.Drawing.Size(75, 23);
             this.btnNextRecord.TabIndex = 20;
@@ -231,7 +270,7 @@
             // 
             // btnPrevRecord
             // 
-            this.btnPrevRecord.Location = new System.Drawing.Point(167, 548);
+            this.btnPrevRecord.Location = new System.Drawing.Point(1241, 664);
             this.btnPrevRecord.Name = "btnPrevRecord";
             this.btnPrevRecord.Size = new System.Drawing.Size(75, 23);
             this.btnPrevRecord.TabIndex = 21;
@@ -241,20 +280,74 @@
             // 
             // btnAllStudents
             // 
-            this.btnAllStudents.Location = new System.Drawing.Point(856, 89);
+            this.btnAllStudents.BackColor = System.Drawing.Color.Blue;
+            this.btnAllStudents.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnAllStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllStudents.ForeColor = System.Drawing.Color.White;
+            this.btnAllStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnAllStudents.Image")));
+            this.btnAllStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAllStudents.Location = new System.Drawing.Point(3, 205);
             this.btnAllStudents.Name = "btnAllStudents";
-            this.btnAllStudents.Size = new System.Drawing.Size(170, 40);
+            this.btnAllStudents.Size = new System.Drawing.Size(283, 95);
             this.btnAllStudents.TabIndex = 22;
             this.btnAllStudents.Text = "View all students";
-            this.btnAllStudents.UseVisualStyleBackColor = true;
+            this.btnAllStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAllStudents.UseVisualStyleBackColor = false;
             this.btnAllStudents.Click += new System.EventHandler(this.btnAllStudents_Click);
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Location = new System.Drawing.Point(515, 297);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(52, 13);
+            this.lblSurname.TabIndex = 24;
+            this.lblSurname.Text = "Surname:";
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Location = new System.Drawing.Point(518, 313);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(151, 20);
+            this.txtSurname.TabIndex = 23;
+            this.txtSurname.Text = "Jacobs";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Blue;
+            this.flowLayoutPanel1.Controls.Add(this.btnAddStudent);
+            this.flowLayoutPanel1.Controls.Add(this.btnDeleteStudent);
+            this.flowLayoutPanel1.Controls.Add(this.btnAllStudents);
+            this.flowLayoutPanel1.Controls.Add(this.btnUpdateSInfo);
+            this.flowLayoutPanel1.Controls.Add(this.btnReport);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 87);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(286, 654);
+            this.flowLayoutPanel1.TabIndex = 27;
             // 
             // frmStudentRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1183, 681);
-            this.Controls.Add(this.btnAllStudents);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1575, 741);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnUpdateDGV);
+            this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.btnPrevRecord);
             this.Controls.Add(this.btnNextRecord);
             this.Controls.Add(this.btnLastRecord);
@@ -269,16 +362,14 @@
             this.Controls.Add(this.lblAverageAge);
             this.Controls.Add(this.lblOutStudents);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.btnUpdateDGV);
-            this.Controls.Add(this.btnAddStudent);
-            this.Controls.Add(this.btnDeleteStudent);
-            this.Controls.Add(this.btnUpdateSInfo);
             this.Controls.Add(this.dgvStudents);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStudentRecords";
             this.Text = "Student Records";
             this.Load += new System.EventHandler(this.frmStudentRecords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,6 +398,10 @@
         private System.Windows.Forms.Button btnNextRecord;
         private System.Windows.Forms.Button btnPrevRecord;
         private System.Windows.Forms.Button btnAllStudents;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
