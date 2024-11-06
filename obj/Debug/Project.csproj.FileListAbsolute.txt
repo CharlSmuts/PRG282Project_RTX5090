@@ -18,3 +18,13 @@ C:\Users\Administrator\Source\Repos\PRG282Project_RTX5090\obj\Debug\Project.cspr
 C:\Users\Administrator\Source\Repos\PRG282Project_RTX5090\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Source\Repos\PRG282Project_RTX5090\obj\Debug\Project.exe
 C:\Users\Administrator\Source\Repos\PRG282Project_RTX5090\obj\Debug\Project.pdb
+D:\GitRepo\bin\Debug\Project.exe.config
+D:\GitRepo\bin\Debug\Project.exe
+D:\GitRepo\bin\Debug\Project.pdb
+D:\GitRepo\obj\Debug\Project.csproj.AssemblyReference.cache
+D:\GitRepo\obj\Debug\Project.frmStudentRecords.resources
+D:\GitRepo\obj\Debug\Project.Properties.Resources.resources
+D:\GitRepo\obj\Debug\Project.csproj.GenerateResource.cache
+D:\GitRepo\obj\Debug\Project.csproj.CoreCompileInputs.cache
+D:\GitRepo\obj\Debug\Project.exe
+D:\GitRepo\obj\Debug\Project.pdb

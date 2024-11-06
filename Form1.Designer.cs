@@ -64,7 +64,7 @@
             // dgvStudents
             // 
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(1114, 247);
+            this.dgvStudents.Location = new System.Drawing.Point(1029, 247);
             this.dgvStudents.MultiSelect = false;
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.ReadOnly = true;
@@ -133,7 +133,7 @@
             // 
             // btnUpdateDGV
             // 
-            this.btnUpdateDGV.Location = new System.Drawing.Point(832, 100);
+            this.btnUpdateDGV.Location = new System.Drawing.Point(1029, 191);
             this.btnUpdateDGV.Name = "btnUpdateDGV";
             this.btnUpdateDGV.Size = new System.Drawing.Size(170, 40);
             this.btnUpdateDGV.TabIndex = 10;
@@ -250,7 +250,7 @@
             // 
             // btnFirstRecord
             // 
-            this.btnFirstRecord.Location = new System.Drawing.Point(1114, 664);
+            this.btnFirstRecord.Location = new System.Drawing.Point(1029, 664);
             this.btnFirstRecord.Name = "btnFirstRecord";
             this.btnFirstRecord.Size = new System.Drawing.Size(75, 23);
             this.btnFirstRecord.TabIndex = 11;
@@ -260,7 +260,7 @@
             // 
             // btnLastRecord
             // 
-            this.btnLastRecord.Location = new System.Drawing.Point(1484, 664);
+            this.btnLastRecord.Location = new System.Drawing.Point(1522, 664);
             this.btnLastRecord.Name = "btnLastRecord";
             this.btnLastRecord.Size = new System.Drawing.Size(75, 23);
             this.btnLastRecord.TabIndex = 14;
@@ -270,7 +270,7 @@
             // 
             // btnNextRecord
             // 
-            this.btnNextRecord.Location = new System.Drawing.Point(1353, 664);
+            this.btnNextRecord.Location = new System.Drawing.Point(1374, 664);
             this.btnNextRecord.Name = "btnNextRecord";
             this.btnNextRecord.Size = new System.Drawing.Size(75, 23);
             this.btnNextRecord.TabIndex = 13;
@@ -280,7 +280,7 @@
             // 
             // btnPrevRecord
             // 
-            this.btnPrevRecord.Location = new System.Drawing.Point(1241, 664);
+            this.btnPrevRecord.Location = new System.Drawing.Point(1210, 664);
             this.btnPrevRecord.Name = "btnPrevRecord";
             this.btnPrevRecord.Size = new System.Drawing.Size(75, 23);
             this.btnPrevRecord.TabIndex = 12;
@@ -393,7 +393,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1717, 739);
+            this.ClientSize = new System.Drawing.Size(1717, 731);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnUpdateDGV);
