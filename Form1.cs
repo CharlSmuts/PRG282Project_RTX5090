@@ -42,7 +42,7 @@ namespace Project
                 id = student.StudentID;//Thus, we will loop through the entire list, and assign the value of the ID of the last student in the list
             }
 
-            studentlist = dataHandler.AddStudent(studentlist, (id + 1), txtName.Text, "PlaceHolderText", int.Parse(txtAge.Text), txtCourse.Text);
+            studentlist = dataHandler.AddStudent(studentlist, (id + 1), txtName.Text, txtSurname.Text, int.Parse(txtAge.Text), txtCourse.Text);
             fileHandler.AddStudent(studentlist);
             MessageBox.Show("The student has been successfully added!", "Student Captured");
             bindingSource.DataSource = "";
@@ -142,6 +142,26 @@ namespace Project
             dgvStudents.Refresh();
             dgvStudents.Update();
             MessageBox.Show("Data is sucessfully updated!");
+        }
+
+        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvStudents_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvStudents.SelectedCells.Count > 0)
+            {
+                int row = dgvStudents.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvStudents.Rows[row];
+                txtName.Text = Convert.ToString(selectedRow.Cells[1].Value);
+                txtSurname.Text = Convert.ToString(selectedRow.Cells[2].Value);
+                txtAge.Text = Convert.ToString(selectedRow.Cells[3].Value);
+                txtCourse.Text = Convert.ToString(selectedRow.Cells[4].Value);
+
+            }
+            
         }
     }
 }

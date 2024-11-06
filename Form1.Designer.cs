@@ -67,6 +67,8 @@
             this.dgvStudents.ReadOnly = true;
             this.dgvStudents.Size = new System.Drawing.Size(568, 401);
             this.dgvStudents.TabIndex = 0;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
+            this.dgvStudents.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_RowEnter);
             // 
             // btnUpdateSInfo
             // 
@@ -81,7 +83,7 @@
             this.btnUpdateSInfo.Location = new System.Drawing.Point(3, 306);
             this.btnUpdateSInfo.Name = "btnUpdateSInfo";
             this.btnUpdateSInfo.Size = new System.Drawing.Size(283, 95);
-            this.btnUpdateSInfo.TabIndex = 1;
+            this.btnUpdateSInfo.TabIndex = 8;
             this.btnUpdateSInfo.Text = "Update Student Information";
             this.btnUpdateSInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpdateSInfo.UseVisualStyleBackColor = false;
@@ -100,7 +102,7 @@
             this.btnDeleteStudent.Location = new System.Drawing.Point(3, 104);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(283, 95);
-            this.btnDeleteStudent.TabIndex = 2;
+            this.btnDeleteStudent.TabIndex = 6;
             this.btnDeleteStudent.Text = "Delete a Student";
             this.btnDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
@@ -119,7 +121,7 @@
             this.btnAddStudent.Location = new System.Drawing.Point(3, 3);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(283, 95);
-            this.btnAddStudent.TabIndex = 3;
+            this.btnAddStudent.TabIndex = 5;
             this.btnAddStudent.Text = "Add a Student";
             this.btnAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddStudent.UseVisualStyleBackColor = false;
@@ -130,7 +132,7 @@
             this.btnUpdateDGV.Location = new System.Drawing.Point(832, 100);
             this.btnUpdateDGV.Name = "btnUpdateDGV";
             this.btnUpdateDGV.Size = new System.Drawing.Size(170, 40);
-            this.btnUpdateDGV.TabIndex = 4;
+            this.btnUpdateDGV.TabIndex = 10;
             this.btnUpdateDGV.Text = "Update DGV";
             this.btnUpdateDGV.UseVisualStyleBackColor = true;
             this.btnUpdateDGV.Click += new System.EventHandler(this.btnUpdateDGV_Click);
@@ -148,7 +150,7 @@
             this.btnReport.Location = new System.Drawing.Point(3, 407);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(283, 95);
-            this.btnReport.TabIndex = 5;
+            this.btnReport.TabIndex = 9;
             this.btnReport.Text = "Generate a summary report";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReport.UseVisualStyleBackColor = false;
@@ -196,7 +198,7 @@
             this.txtName.Location = new System.Drawing.Point(518, 274);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(151, 20);
-            this.txtName.TabIndex = 10;
+            this.txtName.TabIndex = 1;
             this.txtName.Text = "Marco";
             // 
             // txtAge
@@ -204,7 +206,7 @@
             this.txtAge.Location = new System.Drawing.Point(518, 352);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(151, 20);
-            this.txtAge.TabIndex = 12;
+            this.txtAge.TabIndex = 3;
             this.txtAge.Text = "20";
             // 
             // txtCourse
@@ -212,7 +214,7 @@
             this.txtCourse.Location = new System.Drawing.Point(518, 391);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(151, 20);
-            this.txtCourse.TabIndex = 13;
+            this.txtCourse.TabIndex = 4;
             this.txtCourse.Text = "BCOMP";
             // 
             // label1
@@ -247,7 +249,7 @@
             this.btnFirstRecord.Location = new System.Drawing.Point(1114, 664);
             this.btnFirstRecord.Name = "btnFirstRecord";
             this.btnFirstRecord.Size = new System.Drawing.Size(75, 23);
-            this.btnFirstRecord.TabIndex = 18;
+            this.btnFirstRecord.TabIndex = 11;
             this.btnFirstRecord.Text = "|<";
             this.btnFirstRecord.UseVisualStyleBackColor = true;
             this.btnFirstRecord.Click += new System.EventHandler(this.btnFirstRecord_Click);
@@ -257,7 +259,7 @@
             this.btnLastRecord.Location = new System.Drawing.Point(1484, 664);
             this.btnLastRecord.Name = "btnLastRecord";
             this.btnLastRecord.Size = new System.Drawing.Size(75, 23);
-            this.btnLastRecord.TabIndex = 19;
+            this.btnLastRecord.TabIndex = 14;
             this.btnLastRecord.Text = ">|";
             this.btnLastRecord.UseVisualStyleBackColor = true;
             this.btnLastRecord.Click += new System.EventHandler(this.btnLastRecord_Click);
@@ -267,7 +269,7 @@
             this.btnNextRecord.Location = new System.Drawing.Point(1353, 664);
             this.btnNextRecord.Name = "btnNextRecord";
             this.btnNextRecord.Size = new System.Drawing.Size(75, 23);
-            this.btnNextRecord.TabIndex = 20;
+            this.btnNextRecord.TabIndex = 13;
             this.btnNextRecord.Text = ">";
             this.btnNextRecord.UseVisualStyleBackColor = true;
             this.btnNextRecord.Click += new System.EventHandler(this.btnNextRecord_Click);
@@ -277,7 +279,7 @@
             this.btnPrevRecord.Location = new System.Drawing.Point(1241, 664);
             this.btnPrevRecord.Name = "btnPrevRecord";
             this.btnPrevRecord.Size = new System.Drawing.Size(75, 23);
-            this.btnPrevRecord.TabIndex = 21;
+            this.btnPrevRecord.TabIndex = 12;
             this.btnPrevRecord.Text = "<";
             this.btnPrevRecord.UseVisualStyleBackColor = true;
             this.btnPrevRecord.Click += new System.EventHandler(this.btnPrevRecord_Click);
@@ -295,7 +297,7 @@
             this.btnAllStudents.Location = new System.Drawing.Point(3, 205);
             this.btnAllStudents.Name = "btnAllStudents";
             this.btnAllStudents.Size = new System.Drawing.Size(283, 95);
-            this.btnAllStudents.TabIndex = 22;
+            this.btnAllStudents.TabIndex = 7;
             this.btnAllStudents.Text = "View all students";
             this.btnAllStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAllStudents.UseVisualStyleBackColor = false;
@@ -315,7 +317,7 @@
             this.txtSurname.Location = new System.Drawing.Point(518, 313);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(151, 20);
-            this.txtSurname.TabIndex = 23;
+            this.txtSurname.TabIndex = 2;
             this.txtSurname.Text = "Jacobs";
             // 
             // pictureBox1

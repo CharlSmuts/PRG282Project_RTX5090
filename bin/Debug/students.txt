@@ -2,3 +2,5 @@
 2:Micahel:Scott:20:BIT
 3:Pammela:Anderson:18:BCOMP
 4:Jim:Van der berg:21:Diploma
+5:Marco:Jacobs:20:BCOMP
+6:Charl:Smuts:20:BCOMP
