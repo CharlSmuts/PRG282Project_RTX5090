@@ -54,6 +54,8 @@
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnUpdateStudents = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -80,7 +82,7 @@
             this.btnUpdateSInfo.ForeColor = System.Drawing.Color.White;
             this.btnUpdateSInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateSInfo.Image")));
             this.btnUpdateSInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateSInfo.Location = new System.Drawing.Point(3, 306);
+            this.btnUpdateSInfo.Location = new System.Drawing.Point(3, 508);
             this.btnUpdateSInfo.Name = "btnUpdateSInfo";
             this.btnUpdateSInfo.Size = new System.Drawing.Size(283, 95);
             this.btnUpdateSInfo.TabIndex = 8;
@@ -99,7 +101,7 @@
             this.btnDeleteStudent.ForeColor = System.Drawing.Color.White;
             this.btnDeleteStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteStudent.Image")));
             this.btnDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(3, 104);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(3, 407);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(283, 95);
             this.btnDeleteStudent.TabIndex = 6;
@@ -147,7 +149,7 @@
             this.btnReport.ForeColor = System.Drawing.Color.White;
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReport.Location = new System.Drawing.Point(3, 407);
+            this.btnReport.Location = new System.Drawing.Point(3, 609);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(283, 95);
             this.btnReport.TabIndex = 9;
@@ -335,14 +337,54 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.flowLayoutPanel1.Controls.Add(this.btnAddStudent);
-            this.flowLayoutPanel1.Controls.Add(this.btnDeleteStudent);
+            this.flowLayoutPanel1.Controls.Add(this.button2);
             this.flowLayoutPanel1.Controls.Add(this.btnAllStudents);
+            this.flowLayoutPanel1.Controls.Add(this.btnUpdateStudents);
+            this.flowLayoutPanel1.Controls.Add(this.btnDeleteStudent);
             this.flowLayoutPanel1.Controls.Add(this.btnUpdateSInfo);
             this.flowLayoutPanel1.Controls.Add(this.btnReport);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 87);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(296, 512);
             this.flowLayoutPanel1.TabIndex = 27;
+            // 
+            // btnUpdateStudents
+            // 
+            this.btnUpdateStudents.BackColor = System.Drawing.Color.Black;
+            this.btnUpdateStudents.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnUpdateStudents.FlatAppearance.BorderSize = 2;
+            this.btnUpdateStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateStudents.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStudents.Image")));
+            this.btnUpdateStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdateStudents.Location = new System.Drawing.Point(3, 306);
+            this.btnUpdateStudents.Name = "btnUpdateStudents";
+            this.btnUpdateStudents.Size = new System.Drawing.Size(283, 95);
+            this.btnUpdateStudents.TabIndex = 8;
+            this.btnUpdateStudents.Text = "Update Student Information";
+            this.btnUpdateStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdateStudents.UseVisualStyleBackColor = false;
+            this.btnUpdateStudents.Click += new System.EventHandler(this.btnUpdateSInfo_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(3, 104);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(283, 95);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Delete a Student";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // frmStudentRecords
             // 
@@ -409,6 +451,8 @@
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdateStudents;
     }
 }
 
