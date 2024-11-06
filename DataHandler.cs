@@ -23,7 +23,7 @@ namespace Project
 
         //Finds the ID of the Student we want to edit the details from
         //Finds all the new information about the student, and apply the changes
-        public void EditStudent(List<Student> studentlist, int IDtoEdit, int NewID, string NewName, int NewAge, string NewCourse)
+        public void EditStudent(List<Student> studentlist, int IDtoEdit, int NewID, string NewName,string NewSurname, int NewAge, string NewCourse)
         {
             foreach (Student student in studentlist)
             {
@@ -31,6 +31,7 @@ namespace Project
                 {
                     student.StudentID = NewID;
                     student.Name = NewName;
+                    student.Surname = NewSurname;
                     student.Age = NewAge;  
                     student.Course = NewCourse;
                     break;

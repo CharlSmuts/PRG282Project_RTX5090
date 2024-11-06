@@ -91,7 +91,7 @@ namespace Project
             
             if (update == false)
             {
-                if (dgvStudents.SelectedCells.Count > 0)
+                if (dgvStudents.SelectedCells.Count >= 0)
                 {
                     int row = dgvStudents.SelectedCells[0].RowIndex;
                     DataGridViewRow selectedRow = dgvStudents.Rows[row];
@@ -109,7 +109,7 @@ namespace Project
                 string test = $"{dgvStudents.CurrentCell.Value}";
                 IDholder = int.Parse(test);
 
-                dataHandler.EditStudent(studentlist, IDholder, IDholder, txtName.Text, int.Parse(txtAge.Text), txtCourse.Text);
+                dataHandler.EditStudent(studentlist, IDholder, IDholder, txtName.Text, txtSurname.Text,  int.Parse(txtAge.Text), txtCourse.Text);
                 fileHandler.UpdateStudent(studentlist);
                 bindingSource.DataSource = "";
                 bindingSource.DataSource = studentlist;
