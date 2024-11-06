@@ -89,22 +89,7 @@ namespace Project
         private void btnUpdateSInfo_Click(object sender, EventArgs e)
         {
             
-            if (update == false)
-            {
-                if (dgvStudents.SelectedCells.Count >= 0)
-                {
-                    int row = dgvStudents.SelectedCells[0].RowIndex;
-                    DataGridViewRow selectedRow = dgvStudents.Rows[row];
-                    txtName.Text = Convert.ToString(selectedRow.Cells[1].Value);
-                    txtSurname.Text = Convert.ToString(selectedRow.Cells[2].Value);
-                    txtAge.Text = Convert.ToString(selectedRow.Cells[3].Value);
-                    txtCourse.Text = Convert.ToString(selectedRow.Cells[4].Value);
-                }
-                update = true;
-                btnUpdateStudents.Text = "Click to update student info";
-            }
-            else 
-            {
+            
                 this.dgvStudents.CurrentCell = this.dgvStudents[0, dgvStudents.CurrentCell.RowIndex];
                 string test = $"{dgvStudents.CurrentCell.Value}";
                 IDholder = int.Parse(test);
@@ -114,9 +99,8 @@ namespace Project
                 bindingSource.DataSource = "";
                 bindingSource.DataSource = studentlist;
                 dgvStudents.DataSource = bindingSource;
-                update = false;
-                btnUpdateStudents.Text = "Update Student information";
-            }
+
+         
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
@@ -167,13 +151,21 @@ namespace Project
 
         private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void dgvStudents_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            
-            
+            if (dgvStudents.SelectedCells.Count > 0)
+            {
+                int row = dgvStudents.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvStudents.Rows[row];
+                txtName.Text = Convert.ToString(selectedRow.Cells[1].Value);
+                txtSurname.Text = Convert.ToString(selectedRow.Cells[2].Value);
+                txtAge.Text = Convert.ToString(selectedRow.Cells[3].Value);
+                txtCourse.Text = Convert.ToString(selectedRow.Cells[4].Value);
+            }
+
         }
     }
 }
