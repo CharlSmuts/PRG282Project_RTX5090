@@ -54,8 +54,8 @@
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnUpdateStudents = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdateStudents = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -348,25 +348,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(296, 512);
             this.flowLayoutPanel1.TabIndex = 27;
             // 
-            // btnUpdateStudents
-            // 
-            this.btnUpdateStudents.BackColor = System.Drawing.Color.Black;
-            this.btnUpdateStudents.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnUpdateStudents.FlatAppearance.BorderSize = 2;
-            this.btnUpdateStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateStudents.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStudents.Image")));
-            this.btnUpdateStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateStudents.Location = new System.Drawing.Point(3, 306);
-            this.btnUpdateStudents.Name = "btnUpdateStudents";
-            this.btnUpdateStudents.Size = new System.Drawing.Size(283, 95);
-            this.btnUpdateStudents.TabIndex = 8;
-            this.btnUpdateStudents.Text = "Update Student Information";
-            this.btnUpdateStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpdateStudents.UseVisualStyleBackColor = false;
-            this.btnUpdateStudents.Click += new System.EventHandler(this.btnUpdateSInfo_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Black;
@@ -385,6 +366,25 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.btnDeleteStudent_Click);
+            // 
+            // btnUpdateStudents
+            // 
+            this.btnUpdateStudents.BackColor = System.Drawing.Color.Black;
+            this.btnUpdateStudents.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnUpdateStudents.FlatAppearance.BorderSize = 2;
+            this.btnUpdateStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateStudents.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateStudents.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateStudents.Image")));
+            this.btnUpdateStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdateStudents.Location = new System.Drawing.Point(3, 306);
+            this.btnUpdateStudents.Name = "btnUpdateStudents";
+            this.btnUpdateStudents.Size = new System.Drawing.Size(283, 95);
+            this.btnUpdateStudents.TabIndex = 8;
+            this.btnUpdateStudents.Text = "Update Student Information";
+            this.btnUpdateStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdateStudents.UseVisualStyleBackColor = false;
+            this.btnUpdateStudents.Click += new System.EventHandler(this.btnUpdateSInfo_Click);
             // 
             // frmStudentRecords
             // 

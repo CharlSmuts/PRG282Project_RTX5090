@@ -66,5 +66,45 @@ namespace Project
 
             return studentlist;
         }
+
+        public List<Student> SearchStudent(List<Student> students, int studentID)
+        {
+            List<Student> studentlist = new List<Student>();
+            
+            foreach(Student student in students)
+            {
+                if (student.StudentID == studentID)
+                {
+                    studentlist.Add(student);
+                    break;
+                }
+            }
+            if (studentlist.Count <= 0)
+            {
+                MessageBox.Show("That student doesnt exists");
+                return students;
+            }
+            return studentlist;
+        }
+
+        public List<Student> SortbyA(List<Student> students, string name)
+        {
+            students.Sort();
+            return students;
+        }
+
+        public List<Student> SortbyD(List<Student> students, int studentID)
+        {
+            students.Sort();
+            List<Student> result = new List<Student>();
+
+            for (int i = 0; i < students.Count; i++)
+            {
+            result.Add(students[i]);
+            }
+
+            return result;
+        }
+
     }
 }
