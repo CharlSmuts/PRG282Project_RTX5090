@@ -51,14 +51,14 @@
             this.btnUpdateStudents = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSort = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnLastRecord = new System.Windows.Forms.Button();
             this.btnFirstRecord = new System.Windows.Forms.Button();
             this.btnNextRecord = new System.Windows.Forms.Button();
             this.btnPrevRecord = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -337,6 +337,44 @@
             this.panel1.Size = new System.Drawing.Size(454, 512);
             this.panel1.TabIndex = 29;
             // 
+            // btnSort
+            // 
+            this.btnSort.BackColor = System.Drawing.Color.Black;
+            this.btnSort.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnSort.FlatAppearance.BorderSize = 2;
+            this.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSort.ForeColor = System.Drawing.Color.White;
+            this.btnSort.Image = ((System.Drawing.Image)(resources.GetObject("btnSort.Image")));
+            this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSort.Location = new System.Drawing.Point(280, 65);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(169, 56);
+            this.btnSort.TabIndex = 31;
+            this.btnSort.Text = "Sort";
+            this.btnSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSort.UseVisualStyleBackColor = false;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Black;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnSearch.FlatAppearance.BorderSize = 2;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.Location = new System.Drawing.Point(280, 3);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(169, 56);
+            this.btnSearch.TabIndex = 30;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
@@ -422,42 +460,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(568, 51);
             this.panel2.TabIndex = 30;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Black;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnSearch.FlatAppearance.BorderSize = 2;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.Location = new System.Drawing.Point(280, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(169, 56);
-            this.btnSearch.TabIndex = 30;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnSort
-            // 
-            this.btnSort.BackColor = System.Drawing.Color.Black;
-            this.btnSort.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnSort.FlatAppearance.BorderSize = 2;
-            this.btnSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSort.ForeColor = System.Drawing.Color.White;
-            this.btnSort.Image = ((System.Drawing.Image)(resources.GetObject("btnSort.Image")));
-            this.btnSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSort.Location = new System.Drawing.Point(280, 65);
-            this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(169, 56);
-            this.btnSort.TabIndex = 31;
-            this.btnSort.Text = "Sort";
-            this.btnSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSort.UseVisualStyleBackColor = false;
             // 
             // frmStudentRecords
             // 

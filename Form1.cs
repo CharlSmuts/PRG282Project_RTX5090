@@ -17,7 +17,7 @@ namespace Project
         FileHandler fileHandler = new FileHandler();
         static List<Student> studentlist = new List<Student>();
         static int IDholder = 1;
-        bool update = false;
+        bool sortAsc = true;
 
         public frmStudentRecords()
         {
@@ -166,6 +166,25 @@ namespace Project
                 txtCourse.Text = Convert.ToString(selectedRow.Cells[4].Value);
             }
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dgvStudents.DataSource = dataHandler.SearchStudent(studentlist);
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if (sortAsc == true)
+                {
+                    dgvStudents.DataSource = dataHandler.SortbyA(studentlist);
+                    sortAsc = false;
+                }
+            else
+                {
+                    dgvStudents.DataSource = dataHandler.SortbyD(studentlist);
+                    sortAsc= true;
+                }
         }
     }
 }

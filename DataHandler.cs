@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace Project
 {
@@ -67,8 +68,11 @@ namespace Project
             return studentlist;
         }
 
-        public List<Student> SearchStudent(List<Student> students, int studentID)
+        public List<Student> SearchStudent(List<Student> students)
         {
+            int studentID;
+
+            int.TryParse(Interaction.InputBox("Search for a student", "Enter a Student ID", ""), out studentID);
             List<Student> studentlist = new List<Student>();
             
             foreach(Student student in students)
@@ -87,23 +91,18 @@ namespace Project
             return studentlist;
         }
 
-        public List<Student> SortbyA(List<Student> students, string name)
+        public List<Student> SortbyA(List<Student> students)
         {
-            students.Sort();
-            return students;
+            List<Student> sortedList = students.OrderBy(x => x.Name).ToList();
+                
+            return sortedList;
         }
 
-        public List<Student> SortbyD(List<Student> students, int studentID)
+        public List<Student> SortbyD(List<Student> students)
         {
-            students.Sort();
-            List<Student> result = new List<Student>();
+            List<Student> sortedDecList = students.OrderByDescending(x => x.Name).ToList();
 
-            for (int i = 0; i < students.Count; i++)
-            {
-            result.Add(students[i]);
-            }
-
-            return result;
+            return sortedDecList;
         }
 
     }
