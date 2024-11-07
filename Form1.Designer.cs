@@ -51,6 +51,8 @@
             this.btnUpdateStudents = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnAscSort = new System.Windows.Forms.Button();
+            this.btnSearchName = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -59,8 +61,6 @@
             this.btnNextRecord = new System.Windows.Forms.Button();
             this.btnPrevRecord = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSearchName = new System.Windows.Forms.Button();
-            this.BtnAscSort = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -83,8 +83,6 @@
             this.dgvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudents.Size = new System.Drawing.Size(568, 401);
             this.dgvStudents.TabIndex = 0;
-            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick);
-            this.dgvStudents.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_RowEnter);
             // 
             // btnAddStudent
             // 
@@ -122,6 +120,7 @@
             this.btnReport.Text = "Generate a summary report";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // lblTotal
             // 
@@ -344,6 +343,42 @@
             this.panel1.Size = new System.Drawing.Size(454, 512);
             this.panel1.TabIndex = 29;
             // 
+            // BtnAscSort
+            // 
+            this.BtnAscSort.BackColor = System.Drawing.Color.Black;
+            this.BtnAscSort.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.BtnAscSort.FlatAppearance.BorderSize = 2;
+            this.BtnAscSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAscSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAscSort.ForeColor = System.Drawing.Color.White;
+            this.BtnAscSort.Image = ((System.Drawing.Image)(resources.GetObject("BtnAscSort.Image")));
+            this.BtnAscSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAscSort.Location = new System.Drawing.Point(216, 446);
+            this.BtnAscSort.Name = "BtnAscSort";
+            this.BtnAscSort.Size = new System.Drawing.Size(169, 56);
+            this.BtnAscSort.TabIndex = 33;
+            this.BtnAscSort.Text = "Sort Ascending";
+            this.BtnAscSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAscSort.UseVisualStyleBackColor = false;
+            // 
+            // btnSearchName
+            // 
+            this.btnSearchName.BackColor = System.Drawing.Color.Black;
+            this.btnSearchName.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnSearchName.FlatAppearance.BorderSize = 2;
+            this.btnSearchName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchName.ForeColor = System.Drawing.Color.White;
+            this.btnSearchName.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchName.Image")));
+            this.btnSearchName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearchName.Location = new System.Drawing.Point(216, 367);
+            this.btnSearchName.Name = "btnSearchName";
+            this.btnSearchName.Size = new System.Drawing.Size(169, 56);
+            this.btnSearchName.TabIndex = 32;
+            this.btnSearchName.Text = "Search by Name";
+            this.btnSearchName.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearchName.UseVisualStyleBackColor = false;
+            // 
             // btnSort
             // 
             this.btnSort.BackColor = System.Drawing.Color.Black;
@@ -468,42 +503,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(568, 105);
             this.panel2.TabIndex = 30;
-            // 
-            // btnSearchName
-            // 
-            this.btnSearchName.BackColor = System.Drawing.Color.Black;
-            this.btnSearchName.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.btnSearchName.FlatAppearance.BorderSize = 2;
-            this.btnSearchName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchName.ForeColor = System.Drawing.Color.White;
-            this.btnSearchName.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchName.Image")));
-            this.btnSearchName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearchName.Location = new System.Drawing.Point(216, 367);
-            this.btnSearchName.Name = "btnSearchName";
-            this.btnSearchName.Size = new System.Drawing.Size(169, 56);
-            this.btnSearchName.TabIndex = 32;
-            this.btnSearchName.Text = "Search by Name";
-            this.btnSearchName.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearchName.UseVisualStyleBackColor = false;
-            // 
-            // BtnAscSort
-            // 
-            this.BtnAscSort.BackColor = System.Drawing.Color.Black;
-            this.BtnAscSort.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.BtnAscSort.FlatAppearance.BorderSize = 2;
-            this.BtnAscSort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAscSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAscSort.ForeColor = System.Drawing.Color.White;
-            this.BtnAscSort.Image = ((System.Drawing.Image)(resources.GetObject("BtnAscSort.Image")));
-            this.BtnAscSort.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAscSort.Location = new System.Drawing.Point(216, 446);
-            this.BtnAscSort.Name = "BtnAscSort";
-            this.BtnAscSort.Size = new System.Drawing.Size(169, 56);
-            this.BtnAscSort.TabIndex = 33;
-            this.BtnAscSort.Text = "Sort Ascending";
-            this.BtnAscSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnAscSort.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 

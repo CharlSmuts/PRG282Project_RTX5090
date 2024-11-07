@@ -51,6 +51,7 @@ namespace Project
             dgvStudents.DataSource = bindingSource;
             updateStudentCounter();
             findAverageAge();
+            FillTexts();
         }
 
         private void btnPrevRecord_Click(object sender, EventArgs e)
@@ -84,23 +85,24 @@ namespace Project
             dgvStudents.DataSource = bindingSource;
             updateStudentCounter();
             findAverageAge();
+            FillTexts();
         }
 
         private void btnUpdateSInfo_Click(object sender, EventArgs e)
         {
             
             
-                this.dgvStudents.CurrentCell = this.dgvStudents[0, dgvStudents.CurrentCell.RowIndex];
-                string test = $"{dgvStudents.CurrentCell.Value}";
-                IDholder = int.Parse(test);
+            this.dgvStudents.CurrentCell = this.dgvStudents[0, dgvStudents.CurrentCell.RowIndex];
+            string test = $"{dgvStudents.CurrentCell.Value}";
+            IDholder = int.Parse(test);
 
-                dataHandler.EditStudent(studentlist, IDholder, IDholder, txtName.Text, txtSurname.Text,  int.Parse(txtAge.Text), txtCourse.Text);
-                fileHandler.UpdateStudent(studentlist);
-                bindingSource.DataSource = "";
-                bindingSource.DataSource = studentlist;
-                dgvStudents.DataSource = bindingSource;
-
-         
+            dataHandler.EditStudent(studentlist, IDholder, IDholder, txtName.Text, txtSurname.Text,  int.Parse(txtAge.Text), txtCourse.Text);
+            fileHandler.UpdateStudent(studentlist);
+            bindingSource.DataSource = "";
+            bindingSource.DataSource = studentlist;
+            dgvStudents.DataSource = bindingSource;
+                
+            FillTexts();
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
@@ -117,12 +119,38 @@ namespace Project
             IDholder = 1;
             updateStudentCounter();
             findAverageAge();
+            FillTexts();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dgvStudents.DataSource = dataHandler.SearchStudent(studentlist);
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            if (sortAsc == true)
+            {
+                dgvStudents.DataSource = dataHandler.SortbyA(studentlist);
+                sortAsc = false;
+            }
+            else
+            {
+                dgvStudents.DataSource = dataHandler.SortbyD(studentlist);
+                sortAsc = true;
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
 
+        private void btnReport_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
 
         //////////////////////////Tracking functions
         private void updateStudentCounter()
@@ -149,12 +177,7 @@ namespace Project
             MessageBox.Show("Data is sucessfully updated!");
         }
 
-        private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void dgvStudents_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void FillTexts()
         {
             if (dgvStudents.SelectedCells.Count > 0)
             {
@@ -165,31 +188,6 @@ namespace Project
                 txtAge.Text = Convert.ToString(selectedRow.Cells[3].Value);
                 txtCourse.Text = Convert.ToString(selectedRow.Cells[4].Value);
             }
-
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            dgvStudents.DataSource = dataHandler.SearchStudent(studentlist);
-        }
-
-        private void btnSort_Click(object sender, EventArgs e)
-        {
-            if (sortAsc == true)
-                {
-                    dgvStudents.DataSource = dataHandler.SortbyA(studentlist);
-                    sortAsc = false;
-                }
-            else
-                {
-                    dgvStudents.DataSource = dataHandler.SortbyD(studentlist);
-                    sortAsc= true;
-                }
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
