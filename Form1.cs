@@ -138,7 +138,7 @@ namespace Project
                 total += student.Age;
             }
             float avarage = (total / studentlist.Count);
-            lblOutAAge.Text = String.Format("{0}",avarage);
+            lblOutAAge.Text = String.Format("{0}",Math.Round(avarage, 2));
         }
 
         private void btnUpdateDGV_Click(object sender, EventArgs e)

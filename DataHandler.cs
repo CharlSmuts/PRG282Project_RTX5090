@@ -72,7 +72,7 @@ namespace Project
         {
             int studentID;
 
-            int.TryParse(Interaction.InputBox("Search for a student", "Enter a Student ID", ""), out studentID);
+            int.TryParse(Interaction.InputBox("Enter a Student ID", "Search for a student", ""), out studentID);
             List<Student> studentlist = new List<Student>();
             
             foreach(Student student in students)
