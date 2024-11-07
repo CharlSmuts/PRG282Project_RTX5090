@@ -199,5 +199,9 @@ namespace Project
             }
         }
 
+        private void dgvStudents_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            FillTexts();
+        }
     }
 }

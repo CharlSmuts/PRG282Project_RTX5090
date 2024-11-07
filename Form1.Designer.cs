@@ -83,6 +83,7 @@
             this.dgvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudents.Size = new System.Drawing.Size(568, 401);
             this.dgvStudents.TabIndex = 0;
+            this.dgvStudents.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_RowEnter);
             // 
             // btnAddStudent
             // 
