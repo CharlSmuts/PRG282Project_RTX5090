@@ -360,6 +360,7 @@
             this.BtnAscSort.Text = "Sort Ascending";
             this.BtnAscSort.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAscSort.UseVisualStyleBackColor = false;
+            this.BtnAscSort.Click += new System.EventHandler(this.BtnAscSort_Click);
             // 
             // btnSearchName
             // 
@@ -378,6 +379,7 @@
             this.btnSearchName.Text = "Search by Name";
             this.btnSearchName.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearchName.UseVisualStyleBackColor = false;
+            this.btnSearchName.Click += new System.EventHandler(this.btnSearchName_Click);
             // 
             // btnSort
             // 

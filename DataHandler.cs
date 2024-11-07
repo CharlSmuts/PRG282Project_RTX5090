@@ -91,6 +91,29 @@ namespace Project
             return studentlist;
         }
 
+        public List<Student> SearchStudentName(List<Student> students)
+        {
+            string studentname;
+
+            studentname = Interaction.InputBox("Enter a Student Name", "Search for a student", "").ToLower();
+            List<Student> studentlist = new List<Student>();
+
+            foreach (Student student in students)
+            {
+                if (student.Name.ToLower() == studentname)
+                {
+                    studentlist.Add(student);
+                    
+                }
+            }
+            if (studentlist.Count <= 0)
+            {
+                MessageBox.Show("That student doesnt exists");
+                return students;
+            }
+            return studentlist;
+        }
+
         public List<Student> SortbyA(List<Student> students)
         {
             List<Student> sortedList = students.OrderBy(x => x.Name).ToList();

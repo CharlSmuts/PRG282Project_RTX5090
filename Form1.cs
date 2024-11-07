@@ -129,21 +129,17 @@ namespace Project
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            if (sortAsc == true)
-            {
-                dgvStudents.DataSource = dataHandler.SortbyA(studentlist);
-                sortAsc = false;
-            }
-            else
-            {
-                dgvStudents.DataSource = dataHandler.SortbyD(studentlist);
-                sortAsc = true;
-            }
+            dgvStudents.DataSource = dataHandler.SortbyD(studentlist);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BtnAscSort_Click(object sender, EventArgs e)
+        {
+            dgvStudents.DataSource = dataHandler.SortbyA(studentlist);
         }
 
 
@@ -188,6 +184,11 @@ namespace Project
                 txtAge.Text = Convert.ToString(selectedRow.Cells[3].Value);
                 txtCourse.Text = Convert.ToString(selectedRow.Cells[4].Value);
             }
+        }
+
+        private void btnSearchName_Click(object sender, EventArgs e)
+        {
+            dgvStudents.DataSource = dataHandler.SearchStudentName(studentlist);
         }
     }
 }
