@@ -124,12 +124,16 @@ namespace Project
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvStudents.DataSource = dataHandler.SearchStudent(studentlist);
+            bindingSource.DataSource = "";
+            bindingSource.DataSource = dataHandler.SearchStudent(studentlist);
+            dgvStudents.DataSource = bindingSource;
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            dgvStudents.DataSource = dataHandler.SortbyD(studentlist);
+            bindingSource.DataSource = "";
+            bindingSource.DataSource = dataHandler.SortbyD(studentlist);
+            dgvStudents.DataSource = bindingSource;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -139,7 +143,16 @@ namespace Project
 
         private void BtnAscSort_Click(object sender, EventArgs e)
         {
-            dgvStudents.DataSource = dataHandler.SortbyA(studentlist);
+            bindingSource.DataSource = "";
+            bindingSource.DataSource = dataHandler.SortbyA(studentlist);
+            dgvStudents.DataSource = bindingSource;
+        }
+
+        private void btnSearchName_Click(object sender, EventArgs e)
+        {
+            bindingSource.DataSource = "";
+            bindingSource.DataSource = dataHandler.SearchStudentName(studentlist);
+            dgvStudents.DataSource = bindingSource;
         }
 
 
@@ -186,9 +199,5 @@ namespace Project
             }
         }
 
-        private void btnSearchName_Click(object sender, EventArgs e)
-        {
-            dgvStudents.DataSource = dataHandler.SearchStudentName(studentlist);
-        }
     }
 }
