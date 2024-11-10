@@ -48,3 +48,4 @@ C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.csproj.CoreCo
 C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.exe
 C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.pdb
 D:\GitRepo\obj\Debug\Project.SummaryReport.resources
+C:\Users\Administrator\source\repos\PRG282Project_RTX5090\obj\Debug\Project.SummaryReport.resources

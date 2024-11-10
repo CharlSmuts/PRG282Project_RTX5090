@@ -32,6 +32,7 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            this.Close();
             frmStudentRecords f1 = new frmStudentRecords();
             f1.ShowDialog();
         }
@@ -39,8 +40,10 @@ namespace Project
         private void SummaryReport_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
+            this.Close();
             frmStudentRecords f1 = new frmStudentRecords();
             f1.ShowDialog();
+            Application.Exit();
         }
 
         private void SummaryReport_Load(object sender, EventArgs e)

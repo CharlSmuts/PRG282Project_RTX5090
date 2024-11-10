@@ -27,6 +27,7 @@ namespace Project
         private void frmStudentRecords_Load(object sender, EventArgs e)//Executes right after the form has been loaded
         {
             //Here we will read the data in the tf using the FileHandler, and add it to our list
+            studentlist.Clear();
             studentlist = fileHandler.PopulateList(studentlist);
             bindingSource.DataSource = studentlist;
             dgvStudents.DataSource = bindingSource;
@@ -138,6 +139,8 @@ namespace Project
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            this.Close();
             Application.Exit();
         }
 
@@ -166,6 +169,8 @@ namespace Project
             this.Hide();
             SummaryReport f2 = new SummaryReport();
             f2.ShowDialog();
+
+
         }
 
         //////////////////////////Tracking functions
