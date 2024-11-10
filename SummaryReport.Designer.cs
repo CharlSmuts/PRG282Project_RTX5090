@@ -30,19 +30,19 @@
         {
             this.btnExitSummary = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblOldest = new System.Windows.Forms.Label();
-            this.lblYoungest = new System.Windows.Forms.Label();
-            this.lblAveAge = new System.Windows.Forms.Label();
-            this.lblFirstStudent = new System.Windows.Forms.Label();
-            this.lblLastStudent = new System.Windows.Forms.Label();
-            this.lblCommonName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblMCDegree = new System.Windows.Forms.Label();
             this.lblLCDegree = new System.Windows.Forms.Label();
+            this.lblMCDegree = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblCommonName = new System.Windows.Forms.Label();
+            this.lblLastStudent = new System.Windows.Forms.Label();
+            this.lblFirstStudent = new System.Windows.Forms.Label();
+            this.lblAveAge = new System.Windows.Forms.Label();
+            this.lblYoungest = new System.Windows.Forms.Label();
+            this.lblOldest = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExitSummary
@@ -67,6 +67,39 @@
             this.panel1.Size = new System.Drawing.Size(689, 298);
             this.panel1.TabIndex = 2;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Black;
+            this.groupBox2.Controls.Add(this.lblLCDegree);
+            this.groupBox2.Controls.Add(this.lblMCDegree);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(12, 200);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(651, 87);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Course Summary";
+            // 
+            // lblLCDegree
+            // 
+            this.lblLCDegree.AutoSize = true;
+            this.lblLCDegree.Location = new System.Drawing.Point(6, 55);
+            this.lblLCDegree.Name = "lblLCDegree";
+            this.lblLCDegree.Size = new System.Drawing.Size(479, 16);
+            this.lblLCDegree.TabIndex = 1;
+            this.lblLCDegree.Text = "The least common degree is BIT with a total of 3 students enrolled in that degree" +
+    "";
+            // 
+            // lblMCDegree
+            // 
+            this.lblMCDegree.AutoSize = true;
+            this.lblMCDegree.Location = new System.Drawing.Point(6, 28);
+            this.lblMCDegree.Name = "lblMCDegree";
+            this.lblMCDegree.Size = new System.Drawing.Size(500, 16);
+            this.lblMCDegree.TabIndex = 0;
+            this.lblMCDegree.Text = "The most common degree is bcomp with a total of 8 students enrolled in that degre" +
+    "e";
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Black;
@@ -79,55 +112,10 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(428, 185);
+            this.groupBox1.Size = new System.Drawing.Size(651, 185);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Summary";
-            // 
-            // lblOldest
-            // 
-            this.lblOldest.AutoSize = true;
-            this.lblOldest.Location = new System.Drawing.Point(6, 30);
-            this.lblOldest.Name = "lblOldest";
-            this.lblOldest.Size = new System.Drawing.Size(278, 16);
-            this.lblOldest.TabIndex = 0;
-            this.lblOldest.Text = "Oldest student :  Piet Pompues 23 Course: BIT";
-            // 
-            // lblYoungest
-            // 
-            this.lblYoungest.AutoSize = true;
-            this.lblYoungest.Location = new System.Drawing.Point(6, 56);
-            this.lblYoungest.Name = "lblYoungest";
-            this.lblYoungest.Size = new System.Drawing.Size(300, 16);
-            this.lblYoungest.TabIndex = 1;
-            this.lblYoungest.Text = "Youngest student: Koos Roos 18 Course: BCOMP";
-            // 
-            // lblAveAge
-            // 
-            this.lblAveAge.AutoSize = true;
-            this.lblAveAge.Location = new System.Drawing.Point(6, 83);
-            this.lblAveAge.Name = "lblAveAge";
-            this.lblAveAge.Size = new System.Drawing.Size(106, 16);
-            this.lblAveAge.TabIndex = 2;
-            this.lblAveAge.Text = "Average age: 17";
-            // 
-            // lblFirstStudent
-            // 
-            this.lblFirstStudent.AutoSize = true;
-            this.lblFirstStudent.Location = new System.Drawing.Point(6, 108);
-            this.lblFirstStudent.Name = "lblFirstStudent";
-            this.lblFirstStudent.Size = new System.Drawing.Size(304, 16);
-            this.lblFirstStudent.TabIndex = 3;
-            this.lblFirstStudent.Text = "First student added: Piet Pompues 23 Course: BIT.";
-            // 
-            // lblLastStudent
-            // 
-            this.lblLastStudent.AutoSize = true;
-            this.lblLastStudent.Location = new System.Drawing.Point(6, 133);
-            this.lblLastStudent.Name = "lblLastStudent";
-            this.lblLastStudent.Size = new System.Drawing.Size(311, 16);
-            this.lblLastStudent.TabIndex = 4;
-            this.lblLastStudent.Text = "Last student added: Koos Roos 18 Course: BCOMP";
             // 
             // lblCommonName
             // 
@@ -138,38 +126,50 @@
             this.lblCommonName.TabIndex = 5;
             this.lblCommonName.Text = "The most common name is Piet with a total of 3 students with that name";
             // 
-            // groupBox2
+            // lblLastStudent
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Black;
-            this.groupBox2.Controls.Add(this.lblLCDegree);
-            this.groupBox2.Controls.Add(this.lblMCDegree);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 200);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(507, 87);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Course Summary";
+            this.lblLastStudent.AutoSize = true;
+            this.lblLastStudent.Location = new System.Drawing.Point(6, 133);
+            this.lblLastStudent.Name = "lblLastStudent";
+            this.lblLastStudent.Size = new System.Drawing.Size(311, 16);
+            this.lblLastStudent.TabIndex = 4;
+            this.lblLastStudent.Text = "Last student added: Koos Roos 18 Course: BCOMP";
             // 
-            // lblMCDegree
+            // lblFirstStudent
             // 
-            this.lblMCDegree.AutoSize = true;
-            this.lblMCDegree.Location = new System.Drawing.Point(6, 28);
-            this.lblMCDegree.Name = "lblMCDegree";
-            this.lblMCDegree.Size = new System.Drawing.Size(500, 16);
-            this.lblMCDegree.TabIndex = 0;
-            this.lblMCDegree.Text = "The most common degree is bcomp with a total of 8 students enrolled in that degre" +
-    "e";
+            this.lblFirstStudent.AutoSize = true;
+            this.lblFirstStudent.Location = new System.Drawing.Point(6, 108);
+            this.lblFirstStudent.Name = "lblFirstStudent";
+            this.lblFirstStudent.Size = new System.Drawing.Size(304, 16);
+            this.lblFirstStudent.TabIndex = 3;
+            this.lblFirstStudent.Text = "First student added: Piet Pompues 23 Course: BIT.";
             // 
-            // lblLCDegree
+            // lblAveAge
             // 
-            this.lblLCDegree.AutoSize = true;
-            this.lblLCDegree.Location = new System.Drawing.Point(6, 55);
-            this.lblLCDegree.Name = "lblLCDegree";
-            this.lblLCDegree.Size = new System.Drawing.Size(479, 16);
-            this.lblLCDegree.TabIndex = 1;
-            this.lblLCDegree.Text = "The least common degree is BIT with a total of 3 students enrolled in that degree" +
-    "";
+            this.lblAveAge.AutoSize = true;
+            this.lblAveAge.Location = new System.Drawing.Point(6, 83);
+            this.lblAveAge.Name = "lblAveAge";
+            this.lblAveAge.Size = new System.Drawing.Size(106, 16);
+            this.lblAveAge.TabIndex = 2;
+            this.lblAveAge.Text = "Average age: 17";
+            // 
+            // lblYoungest
+            // 
+            this.lblYoungest.AutoSize = true;
+            this.lblYoungest.Location = new System.Drawing.Point(6, 56);
+            this.lblYoungest.Name = "lblYoungest";
+            this.lblYoungest.Size = new System.Drawing.Size(300, 16);
+            this.lblYoungest.TabIndex = 1;
+            this.lblYoungest.Text = "Youngest student: Koos Roos 18 Course: BCOMP";
+            // 
+            // lblOldest
+            // 
+            this.lblOldest.AutoSize = true;
+            this.lblOldest.Location = new System.Drawing.Point(6, 30);
+            this.lblOldest.Name = "lblOldest";
+            this.lblOldest.Size = new System.Drawing.Size(278, 16);
+            this.lblOldest.TabIndex = 0;
+            this.lblOldest.Text = "Oldest student :  Piet Pompues 23 Course: BIT";
             // 
             // SummaryReport
             // 
@@ -183,10 +183,10 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SummaryReport_FormClosed);
             this.Load += new System.EventHandler(this.SummaryReport_Load);
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

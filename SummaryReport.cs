@@ -40,7 +40,6 @@ namespace Project
         private void SummaryReport_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            this.Close();
             frmStudentRecords f1 = new frmStudentRecords();
             f1.ShowDialog();
             Application.Exit();
@@ -51,6 +50,15 @@ namespace Project
             List<string> summarylist = new List<string>();
             ListTransfer transfer = new ListTransfer();
             summarylist = transfer.getList();
+
+            lblOldest.Text = summarylist[0];
+            lblYoungest.Text = summarylist[1];
+            lblAveAge.Text = summarylist[2];
+            lblFirstStudent.Text = summarylist[3];
+            lblLastStudent.Text = summarylist[4];
+            lblCommonName.Text = summarylist[5];
+            lblMCDegree.Text = summarylist[6];
+            lblLCDegree.Text = summarylist[7];  
         }
     }
 }

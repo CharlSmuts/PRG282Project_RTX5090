@@ -219,7 +219,7 @@ namespace Project
             List<string> returnvalues = new List<string>();
             returnvalues.Add(oldestStudent);//Oldest student: + ToString()
             returnvalues.Add(youngestStudent);//Youngest student: + ToString()
-            returnvalues.Add("Avarage age: "+avarageAge);
+            returnvalues.Add("Avarage age: "+Math.Round(avarageAge,2));
             returnvalues.Add(firstStudentAdded);//First student added: + ToString();
             returnvalues.Add(lastStudent);//Last student added: + ToString();
             returnvalues.Add("The most common name is "+mostCommonName+" with a total of "+higestCount+" students with that name");
