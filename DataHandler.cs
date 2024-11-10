@@ -130,82 +130,78 @@ namespace Project
         }
 
 
-        public void summaryReport(List<Student> studentsLists)
+        public List<string> summaryReport(List<Student> studentsLists)
         {
-
-            if (studentsLists ==  null || studentsLists.Count == 0)
-            {
-                MessageBox.Show("No data available to show in report.");
-                return;
-            }
-
-            Student oldestStudent = studentsLists[0];
-            Student youngestStudent = studentsLists[0];
+            int youngest = 500;
+            int oldest = -500;
+            string oldestStudent = "", youngestStudent = "";  
 
             int totalAge = 0;         //calculates total age
 
             foreach(Student student in studentsLists)  //goes through list to find oldest and youngest student
             {
-                if(student.Age > oldestStudent.Age)
+                if(student.Age > oldest)
                 {
-                    oldestStudent = student;
+                    oldest = student.Age;
+                    oldestStudent = "Oldest Student: " + student.ToString();
                 }
 
-                if(student.Age < youngestStudent.Age)
+                if(student.Age < youngest)
                 {
-                    youngestStudent = student;
+                    youngest = student.Age;
+                    youngestStudent = "Youngest Student: " + student.ToString();
                 }
 
                 totalAge += student.Age;
             }
 
             double avarageAge = (double)totalAge / studentsLists.Count;
-            
-            Student firstStudent = studentsLists[0];                         //First and most recently student added
-            Student newestStudent = studentsLists[studentsLists.Count - 1];
 
+            string firstStudentAdded = "First student added: "+studentsLists[1].ToString();
+            string lastStudent = "Last student added: "+studentsLists[studentsLists.Count - 1].ToString();      //First and most recently student added
 
 
             Dictionary<string, int> nameCount = new Dictionary<string, int>();   //Most common name
             foreach(Student student in studentsLists)
             {
-                if (nameCount.ContainsKey(student.Name)) 
+                string temp = student.Name;//I have no clue why this works, but please leave it alone.
+                if (nameCount.ContainsKey(temp))
                 {
-                    nameCount[student.name]++;
+                    nameCount[temp]++;
                 }
                 else
                 {
-                    nameCount[student.Name] = 1;
+                    nameCount[temp] = 1;
                 }
             }
 
             string mostCommonName = "";
             int higestCount = 0;
-            foreach(Student student in studentsLists)
+            foreach (var Name in nameCount)
             {
-                if(nameCount.Values > higestCount)
+                if (Name.Value > higestCount)
                 {
-                    mostCommonName = student.Name;
-                    higestCount++;
+                    higestCount = Name.Value;
+                    mostCommonName = Name.Key;
                 }
             }
-
+            //////
             Dictionary<string, int> degreeCount = new Dictionary<string, int>();  //most and least common degrees
             foreach(Student student in studentsLists)
             {
-                if(!degreeCount.ContainsKey(student.Name))
-                    degreeCount[student.Name]++;
+                if(degreeCount.ContainsKey(student.Course))
+                    degreeCount[student.Course]++;
 
                 else
                 {
-                    degreeCount[student.Name] = 1;
+                    degreeCount[student.Course] = 1;
                 }
             }
 
             string mostCommonDegree = "";
             string leastCommonDegree = "";
-            int maxDegreeCount = 0;
-            int minDegreeCount = int.MaxValue;
+            int maxDegreeCount = -500;
+            int minDegreeCount = 500;
 
             foreach (var degree in degreeCount)
             {
@@ -220,7 +216,16 @@ namespace Project
                     leastCommonDegree = degree.Key;
             }
 
- 
+            List<string> returnvalues = new List<string>();
+            returnvalues.Add(oldestStudent);//Oldest student: + ToString()
+            returnvalues.Add(youngestStudent);//Youngest student: + ToString()
+            returnvalues.Add("Avarage age: "+avarageAge);
+            returnvalues.Add(firstStudentAdded);//First student added: + ToString();
+            returnvalues.Add(lastStudent);//Last student added: + ToString();
+            returnvalues.Add("The most common name is "+mostCommonName+" with a total of "+higestCount+" students with that name");
+            returnvalues.Add("The most common degree is " + mostCommonDegree + " with a total of " + maxDegreeCount + " students enrolled in that degree");
+            returnvalues.Add("The least common degree is " + leastCommonDegree + " with a total of " + minDegreeCount + " students enrolled in that degree");
+            return returnvalues;
         }
     }
 }

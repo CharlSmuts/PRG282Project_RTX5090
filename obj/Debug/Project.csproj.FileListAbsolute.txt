@@ -47,3 +47,4 @@ C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.csproj.Genera
 C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.exe
 C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.pdb
+D:\GitRepo\obj\Debug\Project.SummaryReport.resources

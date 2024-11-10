@@ -549,6 +549,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStudentRecords";
             this.Text = "Student Records";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmStudentRecords_FormClosed);
             this.Load += new System.EventHandler(this.frmStudentRecords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

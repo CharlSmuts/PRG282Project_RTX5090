@@ -158,7 +158,14 @@ namespace Project
 
         private void btnReport_Click(object sender, EventArgs e)
         {
+            List<string> summary = new List<string>();
+            summary = dataHandler.summaryReport(studentlist);
+            ListTransfer transfer = new ListTransfer(summary);
 
+            //Close the current form and open the form to display the report
+            this.Hide();
+            SummaryReport f2 = new SummaryReport();
+            f2.ShowDialog();
         }
 
         //////////////////////////Tracking functions
@@ -202,6 +209,11 @@ namespace Project
         private void dgvStudents_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             FillTexts();
+        }
+
+        private void frmStudentRecords_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
