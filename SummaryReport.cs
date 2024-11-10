@@ -42,5 +42,12 @@ namespace Project
             frmStudentRecords f1 = new frmStudentRecords();
             f1.ShowDialog();
         }
+
+        private void SummaryReport_Load(object sender, EventArgs e)
+        {
+            List<string> summarylist = new List<string>();
+            ListTransfer transfer = new ListTransfer();
+            summarylist = transfer.getList();
+        }
     }
 }

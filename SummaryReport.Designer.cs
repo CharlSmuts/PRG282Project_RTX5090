@@ -61,6 +61,7 @@
             this.Name = "SummaryReport";
             this.Text = "SummaryReport";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SummaryReport_FormClosed);
+            this.Load += new System.EventHandler(this.SummaryReport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
