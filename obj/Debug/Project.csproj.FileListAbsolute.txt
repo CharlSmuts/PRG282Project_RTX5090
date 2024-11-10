@@ -38,3 +38,12 @@ C:\Users\micha\Source\Repos\PRG282Project_RTX5090\obj\Debug\Project.csproj.Gener
 C:\Users\micha\Source\Repos\PRG282Project_RTX5090\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\micha\Source\Repos\PRG282Project_RTX5090\obj\Debug\Project.exe
 C:\Users\micha\Source\Repos\PRG282Project_RTX5090\obj\Debug\Project.pdb
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.frmStudentRecords.resources
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.SummaryReport.resources
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.exe
+C:\Users\payne\OneDrive\Documents\prg282_project\obj\Debug\Project.pdb

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -128,5 +129,98 @@ namespace Project
             return sortedDecList;
         }
 
+
+        public void summaryReport(List<Student> studentsLists)
+        {
+
+            if (studentsLists ==  null || studentsLists.Count == 0)
+            {
+                MessageBox.Show("No data available to show in report.");
+                return;
+            }
+
+            Student oldestStudent = studentsLists[0];
+            Student youngestStudent = studentsLists[0];
+
+            int totalAge = 0;         //calculates total age
+
+            foreach(Student student in studentsLists)  //goes through list to find oldest and youngest student
+            {
+                if(student.Age > oldestStudent.Age)
+                {
+                    oldestStudent = student;
+                }
+
+                if(student.Age < youngestStudent.Age)
+                {
+                    youngestStudent = student;
+                }
+
+                totalAge += student.Age;
+            }
+
+            double avarageAge = (double)totalAge / studentsLists.Count;
+            
+            Student firstStudent = studentsLists[0];                         //First and most recently student added
+            Student newestStudent = studentsLists[studentsLists.Count - 1];
+
+
+
+            Dictionary<string, int> nameCount = new Dictionary<string, int>();   //Most common name
+            foreach(Student student in studentsLists)
+            {
+                if (nameCount.ContainsKey(student.Name)) 
+                {
+                    nameCount[student.name]++;
+                }
+                else
+                {
+                    nameCount[student.Name] = 1;
+                }
+            }
+
+            string mostCommonName = "";
+            int higestCount = 0;
+            foreach(Student student in studentsLists)
+            {
+                if(nameCount.Values > higestCount)
+                {
+                    mostCommonName = student.Name;
+                    higestCount++;
+                }
+            }
+
+            Dictionary<string, int> degreeCount = new Dictionary<string, int>();  //most and least common degrees
+            foreach(Student student in studentsLists)
+            {
+                if(!degreeCount.ContainsKey(student.Name))
+                    degreeCount[student.Name]++;
+
+                else
+                {
+                    degreeCount[student.Name] = 1;
+                }
+            }
+
+            string mostCommonDegree = "";
+            string leastCommonDegree = "";
+            int maxDegreeCount = 0;
+            int minDegreeCount = int.MaxValue;
+
+            foreach (var degree in degreeCount)
+            {
+                if (degree.Value > maxDegreeCount)
+                {
+                    mostCommonDegree = degree.Key;
+                    maxDegreeCount = degree.Value;
+                }
+                if (degree.Value < minDegreeCount)
+
+                    minDegreeCount = degree.Value;
+                    leastCommonDegree = degree.Key;
+            }
+
+ 
+        }
     }
 }
